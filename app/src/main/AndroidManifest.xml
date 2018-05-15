@@ -18,7 +18,7 @@
         </activity>
         <activity android:name=".layoutmanager.SampleActivity">
         </activity>
-        <activity android:name=".layoutmanagersys.SampleActivity">
+        <activity android:name=".viewdraghelper.ActivityViewDrag">
         </activity>
     </application>
 
