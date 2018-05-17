@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.wtb.sourcecodered.layoutmanager.SampleActivity;
+import com.wtb.sourcecodered.scrollview.ActivityScrollView;
 import com.wtb.sourcecodered.viewdraghelper.ActivityViewDrag;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +29,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ActivityViewDrag.class));
+            }
+        });
+        findViewById(R.id.scroll_view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ActivityScrollView.class));
             }
         });
     }
