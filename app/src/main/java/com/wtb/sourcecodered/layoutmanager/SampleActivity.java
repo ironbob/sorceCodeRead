@@ -7,9 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import com.wtb.sourcecodered.R;
 import com.wtb.sourcecodered.recyclerview.RecyclerView;
 import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.GestureDetector;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.ToggleButton;
 
 
@@ -17,6 +20,7 @@ import android.widget.ToggleButton;
  * Created by Julian Villella on 16-02-24.
  */
 public class SampleActivity extends AppCompatActivity {
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,19 @@ public class SampleActivity extends AppCompatActivity {
             public void onClick(View view) {
                 layoutManager.setFixedHeight(((ToggleButton) view).isChecked());
                 layoutManager.requestLayout();
+            }
+        });
+        imageView  = findViewById(R.id.test_click);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("SampleActivity","点击图片");
+            }
+        });
+        findViewById(R.id.test_click2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("ClickThroughLayout","点击图片2");
             }
         });
     }

@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".viewdraghelper.ActivityViewDrag">
         </activity>
+        <activity android:name=".scrollview.ActivityScrollView">
+        </activity>
     </application>
 
 </manifest>
